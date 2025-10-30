@@ -1,6 +1,9 @@
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.fail;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import java.util.Set;
 
@@ -107,6 +110,13 @@ public class ProblemSolvingTest {
   // TODO:
   // Come up with ALL tests to thoroughly test minLength
   // Use your creativity here, and consider looking back at the maxLength
-  // tests for inspiration
-
+  @Test
+  void testMinLength_multipleWordsEqualLength() {
+    Set<String> input = Set.of("1", "2", "3", "4");
+    // act
+    int actual = ProblemSolving.minLength(input);
+    System.out.println(actual);
+    //assert
+    assertEquals(1, actual);
+  }
 }
