@@ -59,6 +59,15 @@ public class ProblemSolvingTest {
   // TODO:
   // Come up with more tests to thoroughly test hasEmptyString
   // Use your creativity here!
+  @Test 
+  void testHasEmptyString_edgecase () {
+    // arrange
+    Set<String> input = Set.of();
+    // act
+    boolean actual = ProblemSolving.hasEmptyString(input);
+    // assert
+    assertFalse(actual);
+  }
 
 
   @Test
