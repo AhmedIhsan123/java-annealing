@@ -119,4 +119,14 @@ public class ProblemSolvingTest {
     //assert
     assertEquals(1, actual);
   }
+
+  @Test
+  void testMinLength_edgecase () {
+    // arrange
+    Set<String> input = Set.of();
+    // act
+    int actual = ProblemSolving.minLength(input);
+    // assert
+    assertEquals(Integer.MAX_VALUE, actual);
+  }
 }
