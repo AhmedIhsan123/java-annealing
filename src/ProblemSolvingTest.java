@@ -43,7 +43,7 @@ public class ProblemSolvingTest {
     // assert
     assertTrue(actual);
   }
-  
+
   @Test
   void testHasEmptyString_falseAllNonEmpty() {
     // arrange
@@ -93,6 +93,15 @@ public class ProblemSolvingTest {
   // TODO:
   // Come up with more tests to thoroughly test maxLength
   // Use your creativity here!
+  @Test
+  void testMaxLength_specialCharacters () {
+    // arrange
+    Set<String> input = Set.of("123", "@%^&", "$", "+-9027");
+    // act
+    int actual = ProblemSolving.maxLength(input);
+    // assert
+    assertEquals(6, actual);
+  }
     
   
   // TODO:
